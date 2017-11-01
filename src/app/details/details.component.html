@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 col-xs-12">
+            <div class="card">
+                <img class="card-img-top" src="{{game?.imageURL}}" alt="">
+                <div class="card-block">
+                    <p><span class="details-label">Game: Rating:</span>
+                        <bar-rating rate="{{game?.rating}}" [max]="5"></bar-rating>
+                    </p>
+                    <p class="card-text"><span class="details-label">Game Name:</span> {{game?.name}}</p>
+                    <h6><span class="details-label">Game Publisher:</span> {{game?.publisher}}</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

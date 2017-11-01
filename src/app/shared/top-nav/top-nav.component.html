@@ -1,0 +1,53 @@
+<div class="container-fluid top-menu">
+    <button (click)="toggleMenu()" class="hamburger d-inline-block">
+        <span>toggle menu</span>
+    </button>
+    <!-- /.hamburger -->
+
+    <ul class="navbar-nav d-inline-block mr-auto">
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]=" ['./'] " routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Games</a>
+        </li>
+    </ul>
+    <!-- /.navbar-nav -->
+
+    <form class="form-inline my-2 my-lg-0 d-inline-block">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+    <!-- /.form-inline -->
+</div>
+<!-- /.top-menu -->
+
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- side-nav -->
+    <side-nav [@slideInOut]="menuState"></side-nav>
+    <!-- side-nav -->
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]=" ['./categories'] " routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Categories</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]=" ['./highlights'] " routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Highlights</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]=" ['./top'] " routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Top</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]=" ['./new'] " routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">New</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]=" ['./recommended'] " routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Recommended</a>
+            </li>
+        </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+
+</nav>
+<!-- /.navbar-toggleable-md -->
